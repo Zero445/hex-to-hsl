@@ -1,4 +1,4 @@
-# hexHsl
+# hextohsl
 
 A basic CLI color convertion tool.
 
