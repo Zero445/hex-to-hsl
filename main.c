@@ -115,11 +115,11 @@ int main(int argc, char *argv[])
 		
 		if (argc > 1 && strcmp(argv[1],"-c") == 0)
 		{
-			printf("hsl(%d,%d%%,%d%%)", (int) hsl.hue, (int) hsl.sat, (int) hsl.lum);
+			printf("hsl(%d,%d%%,%d%%)\n", (int) hsl.hue, (int) hsl.sat, (int) hsl.lum);
 		}
 		else
 		{
-			printf("%d %d%% %d%%", (int) hsl.hue, (int) hsl.sat, (int) hsl.lum);	
+			printf("%d %d%% %d%%\n", (int) hsl.hue, (int) hsl.sat, (int) hsl.lum);	
 		}
 			
 		
