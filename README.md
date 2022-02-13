@@ -1,6 +1,10 @@
 # hexHsl
 
-A basic CLI HEX to HSL color convertion tool.
+A basic CLI color convertion tool.
+
+Converts HEX colors to HSL. 
+
+Can be quite useful when piped with other tools like xcolor.
 
 Usage
 
