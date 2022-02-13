@@ -3,7 +3,7 @@
 #include "stdint.h"
 #include "math.h"
 #include "string.h"
-#include "fcntl.h"
+#include "unistd.h"
 
 typedef struct RGB_t 
 {
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 {
 	uint8_t		hex_string[7];
 	
-	if (argv[argc-1][0] != '#')
+	if (argv[argc-1][0] != '#' && !isatty(STDIN_FILENO))
 	{
 		
 		scanf("%7s",hex_string);
