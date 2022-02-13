@@ -85,11 +85,12 @@ int main(int argc, char *argv[])
 		else
 		{
 			hsl.sat = (hsl.lum <= 0.5) ? (*rgb.max - *rgb.min) / (*rgb.max + *rgb.min) : (*rgb.max - *rgb.min) / (2.0 - *rgb.max - *rgb.min);
+			hsl.sat += 0.01;
 		
 	
 			if(rgb.max == &rgb.red)
 			{	
-					hsl.hue = (rgb.green < rgb.blue) ? 6.0 : 0 + (rgb.green - rgb.blue) / (*rgb.max - *rgb.min);
+					hsl.hue = (rgb.green - rgb.blue) / (*rgb.max - *rgb.min);
 			}
 			else if (rgb.max == &rgb.green)
 			{
@@ -101,13 +102,11 @@ int main(int argc, char *argv[])
 			}
 			
 			
-			if (hsl.hue < 0)
+			hsl.hue *= 60;
+			
+			if (hsl.hue < -0)
 			{
 				hsl.hue += 360;
-			}
-			else 
-			{
-				hsl.hue *= 60;
 			}
 		}
 		hsl.lum *= 100;
