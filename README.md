@@ -6,7 +6,8 @@ Converts HEX colors to HSL.
 
 Can be quite useful when piped with other tools like xcolor.
 
-Usage
+## Usage
+
 ```console
 $ ./hextohsl "#ff0aff"
 300 100% 51%
