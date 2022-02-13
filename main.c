@@ -3,6 +3,7 @@
 #include "stdint.h"
 #include "math.h"
 #include "string.h"
+#include "fcntl.h"
 
 typedef struct RGB_t 
 {
@@ -38,18 +39,8 @@ int main(int argc, char *argv[])
 	
 	if (argv[argc-1][0] != '#')
 	{
-		uint32_t c;
-		for (c = getchar(); c != EOF; c=getchar())
-		{
-			if (c == '#')
-			{
-				hex_string[0] = c;
-				for (int i=1;i < 7; ++i)
-				{
-					hex_string[i] = getchar();
-				}
-			}
-		}
+		
+		scanf("%7s",hex_string);
 				
 	}
 	else
